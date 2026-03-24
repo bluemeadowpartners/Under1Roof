@@ -151,7 +151,7 @@ function saveData(d) {
 // ─── Anthropic API helpers ────────────────────────────────────────────────────
 
 async function callClaude(messages, max_tokens = 1000) {
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const response = await fetch("/api/scan", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens, messages }),
